@@ -297,7 +297,7 @@ else {
 	alert("Por haber trabajado más de 3 años en esta empresa, su sueldo será de: $"+total+".-");
 }
 
-
+*/
 
 ////////////////////// LEVEL UP : 2 ///////////////////////////////
 
@@ -329,7 +329,6 @@ else {
 	alert("Sus puntos no le alcanzan. Lo sentimos.")
 }
 
-*/
 
 
 
