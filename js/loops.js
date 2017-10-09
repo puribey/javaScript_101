@@ -85,15 +85,64 @@ for (var i=0; i<lista.lenght;i++){
 
 */
 
-for (var numero= 0 ; numero <=100; numero++){
-	console.log(numero);
+
+console.log("Tabla del 9 con for")
+
+var total;
+
+for (var numero=0 ; numero <=10; numero++){
+	total= numero*9;
+	console.log(total);
 }
 
 
 
+console.log("Tabla del 9 con do/while")
+
+
+var num =0;
+
+do {
+	tot= num*9;
+	console.log(tot);
+	num++;
+}while(num <=10); 
 
 
 
+console.log("Tabla del 9 con while")
+
+var n = 0;
+
+while (n<=10){
+	t= n *9;
+	console.log(t);
+	n++;
+}
+
+/*
+
+var total=0;
+var n= 50;
+
+for (var numero=1 ; numero <=n; numero++){
+	total= total+numero;
+	console.log(total);
+}
+
+var totalFinal=total/n;
+console.log(totalFinal);
+
+
+var total=1;
+var n= 10;
+
+for (var numero=1 ; numero<=n; numero++){
+	total= total*numero;
+	console.log(total);
+}
+
+*/
 
 
 

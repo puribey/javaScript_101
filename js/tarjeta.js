@@ -1,4 +1,4 @@
-var numero= "36785043";
+var numero= prompt("Ingrese un numero: ");
 console.log(numero);
 var esSegDig= false;
 var total=0;
