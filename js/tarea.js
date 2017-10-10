@@ -441,3 +441,25 @@ console.log(`Los dos arrays tienen ${igual} letras en común.`);
 // Ejercicio 7 
 
 
+var datos1 = ["Fido","Gomez",26,15000.78,true];
+var datos2 = ["Gervasio","Fernandez",32,28.550,false];
+var aumento;
+
+console.log(datos1);
+console.log(datos2);
+
+if (datos1[2]<datos2[2]){
+	console.log(`Fido es menor que Gervasio. Fido tiene ${datos1[2]} años y Gervasio tiene ${datos2[2]}.`);
+} else { console.log(`Fido es mayor que Gervasio. Fido tiene ${datos1[2]} años y Gervasio tiene ${datos2[2]}.`); }
+
+if (datos1[4]){
+	console.log("Fido esta casado");
+} else if (datos2[4]) {console.log("Gervasio esta casado");}
+
+aumento = (datos2[3]*12.5)/100;
+console.log(aumento);
+
+montoFinal = datos1[3]+aumento;
+montoFinal = montoFinal.toFixed(2);
+
+console.log(`El monto a cobrar por fido este mes sera de $ ${montoFinal} .-` );
