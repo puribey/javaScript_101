@@ -36,27 +36,63 @@ for (var i=0 ; i<semana.length; i++ ){
 alert(total);
 alert(total/semana.length);
 
-*/
 
+// Console.log de dos indices:
 
-var numero= "36785043"
 var semana = [50, 35, 105, 40, 25]; 
 var dias = ["Lunes","Martes","Miércoles","Jueves", "Viernes"];
 var total = 0;
 
-var extra = (numero.charAt(numero.length-1));
-
-alert(extra);
-alert(numero+extra);
-
 for (var i=0 ; i<semana.length; i++ ){
 	if (semana[i]>50){
 	console.log(dias[i]+"= "+semana[i]);
-	
 	}
-	
 }
 
+
+// Asignación de valores a un array 
+
+var notasMusicales = [];
+var cant = notasMusicales.length;
+
+console.log(cant);
+
+notasMusicales[0]= "Do";
+notasMusicales[1]= "Re";
+notasMusicales[2]= "Mi";
+notasMusicales[3]= "Fa";
+notasMusicales[4]= "Sol";
+notasMusicales[5]= "La";
+notasMusicales[6]= "Si";
+notasMusicales[7]= "Do";
+
+console.log(notasMusicales);
+
+var ultimoElemento = notasMusicales.length-1; // esto va a mostrar el indice 
+var contElemento = notasMusicales[notasMusicales.length-1]; // esto va a mostrar el contenido
+
+console.log(ultimoElemento);
+console.log(contElemento);
+
+*/
+
+
+var pokemons = [];
+
+pokemons[0]="Pikachu";
+pokemons[1]="Charmander";
+pokemons[2]="Squirtle";
+pokemons[3]="Lapras";
+pokemons[4]="Toggepi";
+pokemons[5]="Vaporeon";
+pokemons[6]="Chikorita";
+pokemons[7]="Sindaquil";
+pokemons[8]="Bulpix";
+pokemons[9]="Ninetiles";
+
+var pokeUlt = pokemons[pokemons.length-1];
+var pokePrim = pokemons[0];
+console.log(`${pokePrim} and ${pokeUlt}`);
 
 
 

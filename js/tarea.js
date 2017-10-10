@@ -297,7 +297,7 @@ else {
 	alert("Por haber trabajado más de 3 años en esta empresa, su sueldo será de: $"+total+".-");
 }
 
-*/
+
 
 ////////////////////// LEVEL UP : 2 ///////////////////////////////
 
@@ -332,12 +332,112 @@ else {
 
 
 
+///////////////////////// LEVEL UP : ARRAY ////////////////////////////
+
+
+// Ejericio 1 
+
+var n = 5;
+
+for (var i= 0 ; i<=n ; i++){
+	console.log(i);
+}
 
 
 
+// Ejercicio 2 
+
+
+var n = 5;
+
+for (var i= 0 ; i<=n ; i++){
+	if (i%2==0){
+		cero = 0;
+		console.log(cero);
+	}
+	else { 
+		console.log(i);
+	}
+}
 
 
 
+// Ejercicio 3 y 4
 
+var x = [10,24,36,7,98,11,14,20];
+var max = x[0];
+var pos = 0;
+
+for (var i=0; i<=x.length-1; i++ ){
+	if (x[i]>max){
+		max = x[i];
+		pos = i;
+	}
+}
+
+console.log("Este es el valor de x: "+x);
+console.log("Este es el valor de max: "+max);
+console.log("Este es el valor de pos: "+pos);
+
+
+
+// Ejercicio 5
+
+var x = [10,24,36,7,98,11,14,20,98,14,10];
+var max = 0;
+
+for (var i=0; i<=x.length-1; i++ ){
+	if (x[i]>max){
+		max = x[i];
+	}
+}
+
+console.log("Este es el valor de max: "+max);
+
+var rep = 0;
+
+for (var i=0; i<=x.length-1; i++ ){
+	if (x[i]==max){
+		rep=rep+1;
+	}
+}
+
+console.log(`El numero mayor es ${max} y se repite ${rep} veces`);
+
+
+// Ejercicio 6 
+
+var X = ["a","l","f","a"];
+var Y = ["a","l","f","a","j","o","r"];
+
+if (X.length == Y.length){
+	console.log("Son iguales");
+} else { console.log("Son diferentes");}
+
+if (X.length > Y.length) {
+	console.log ("X es mas lagro que Y");
+} else { console.log("Y es mas largo que X");}
+
+var igual = 0;
+
+for (var i= 0 ; i<=X.length-1 ; i++){
+	for (var n= 0 ; n<=Y.length-1 ; n++) {
+		if (Y[n] == X[i]){
+			igual +=1;
+		}
+	}
+}
+
+console.log(`Los dos arrays tienen ${igual} letras en común.`);
+
+//for (var i= 0 ; i<=X.length-1 ; i++){
+//	if (Y[i] == X[i]){
+//		igual +=1;
+//	}
+//}
+
+*/
+
+// Ejercicio 7 
 
 
