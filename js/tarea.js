@@ -459,8 +459,13 @@ console.log(`Los dos arrays tienen ${igual} letras en común.`);
 var X = ["a","l","f","a"];
 var Y = ["a","l","f","a","j","o","r"];
 var distinto = false;
+var xL = X.length;
+var yL = Y.length;
+var N;
+var M;
+var igual = 0;
 
-if (X.length == Y.legth){
+if (X.length == Y.length){
 	for(var i=0; i<X.length; i++){
 		if (X[i]!=Y[i]){
 			distinto=true;
@@ -468,14 +473,26 @@ if (X.length == Y.legth){
 	}
 }
 else {
-	if(X.length>Y.length){
+	if(xL>yL){
 		console.log("X es mas largo");
+		N=yL;
+		M=xL;
 	}
 	else {
+		N=xL;
+		M=yL;
 		console.log("Y es mas largo");
 	}
 }
 
+for (var i= 0 ; i<=X.length-1 ; i++){
+	for (var n= 0 ; n<=Y.length-1 ; n++) {
+		if (Y[n] == X[i]){
+			igual +=1;
+			console.log(igual);
+		}
+	}
+}
 */
 
 // Ejercicio 7 
