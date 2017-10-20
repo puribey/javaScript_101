@@ -72,9 +72,52 @@ for (var i=0 ; i<num.length; i++){
 
 ////////////////////////////////////////////
 
+
+
+var ul = [5, 3, 1, 2, 4];  
+var len = ul.length;
+
+for (var i = 1; i < len; i++) {
+	var tmp = ul[i]; //Copy of the current element. 
+	console.log("Este es el valor de tmp: " + tmp)
+	//Check through the sorted part and compare with the number in tmp. If large, shift the number
+	for (var j = i - 1; j >= 0 && (ul[j] > tmp); j--) {
+	//Shift the number
+	ul[j + 1] = ul[j];
+	console.log("Ul con numeros nuevos: " + ul);
+	}
+	//Insert the copied number at the correct position
+	//in sorted part. 
+	ul[j + 1] = tmp;
+	console.log(ul[j+1]);
+}
+
+
+console.log(ul);
+
 */
 
 
+// BUBBLE SORT 
 
+var num = [6, 5, 3, 1, 8, 7, 2, 4];
+console.log(num);
+var swap = true; // esta var o bandera es para evitar multiples iteraciones si los numeros se ordenan rapido 
 
+for (var i = 0 ; i<num.length && swap===true ; i++){
+
+	swap = false;
+	for(var j = 0 ; j<num.length-i ; j++){ // el -i hace que se reste un indice del array
+		if (num[j]>num[j+1]){
+			var numTemp = num[j]; 
+			num[j]=num[j+1];
+			num[j+1]=numTemp;
+
+			swap =true;
+		}
+		console.log(i, j); // imprimo esto para ver los indices y las vueltas del for
+	}
+}
+
+console.log(num);
 

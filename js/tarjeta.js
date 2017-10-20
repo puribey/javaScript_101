@@ -1,4 +1,4 @@
-var numero= prompt("Ingrese un numero: ");
+var numero= "36785043";
 console.log(numero);
 var esSegDig= false;
 var total=0;
@@ -28,10 +28,10 @@ console.log("El total es: "+total);
 
 // Normalmente sería 
 if (total%10===0){
-	alert("Bien ahi");
+	console.log("Bien ahi");
 }
 else {
-	alert("Mal ahi");
+	console.log("Mal ahi");
 }
 
 

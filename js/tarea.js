@@ -493,7 +493,10 @@ for (var i= 0 ; i<=X.length-1 ; i++){
 		}
 	}
 }
-*/
+
+
+
+
 
 // Ejercicio 7 
 
@@ -520,3 +523,45 @@ montoFinal = datos1[3]+aumento;
 montoFinal = montoFinal.toFixed(2);
 
 console.log(`El monto a cobrar por fido este mes sera de $ ${montoFinal} .-` );
+
+
+// OPCION OPTIMA 
+
+
+var datos1 = ["Fido","Gomez",26,15000.78,true];
+var datos2 = ["Gervasio","Fernandez",32,28.550,false];
+var aumento = 0;
+var montoFinal = 0;
+
+console.log(datos1);
+console.log(datos2);
+
+
+for (var i = 0 ; i<datos1.length ; i++){
+	if (Number.isInteger(datos1[i]) && Number.isInteger(datos2[i])) {
+		if (datos1[i]>datos2[i]){
+		console.log(`Fido es menor que Gervasio. Fido tiene ${datos1[i]} años y Gervasio tiene ${datos2[i]}.`);
+		}
+		else { console.log(`Fido es mayor que Gervasio. Fido tiene ${datos1[i]} años y Gervasio tiene ${datos2[i]}.`); 
+		}
+	}
+	if (typeof(datos1[i]) == 'boolean' && typeof(datos2[i])== 'boolean') {
+		if (datos1[i]===true) {
+			console.log("Fido esta casado.");
+		}
+		else {
+			console.log("Gervasio esta casado.");
+		}
+	}
+	if (typeof(datos1[i]) == "number" && typeof(datos2[i])== "number"){
+		if (Number.isInteger(datos1[i]) == false && Number.isInteger(datos2[i]) == false){
+		aumento = (datos2[i]*12.5)/100;
+		console.log(aumento);
+		montoFinal = (datos1[i]+aumento).toFixed(2);
+
+		console.log(`El monto a cobrar por fido este mes sera de $ ${montoFinal} .-` );
+		}
+	} 
+}
+
+*/
