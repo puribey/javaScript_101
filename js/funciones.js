@@ -47,7 +47,7 @@ function fibo(num) {
 var cantConejos = fibonacci(10);
 console.log(cantConejos);
 
-*/
+
 
 // BUSCANDO A NEMO CON FUNCIONES 
 
@@ -74,5 +74,14 @@ if (encontreANemo==true){
 	console.log(`Encontre a Nemo!`);
 }
 
+*/
+
+// Funcion Random para Halloween 
+
+
+function randomHalloween (disfraces){
+	var pos = Math.floor((Math.random()*(disfraces.length-1)));
+	return disfraces[pos];
+}
 
 
