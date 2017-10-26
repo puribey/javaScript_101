@@ -436,7 +436,8 @@ console.log(`El monto a cobrar por fido este mes sera de $ ${montoFinal} .-` );
 	} else { console.log(`El numero ${numero} NO es primo`);}
 	}
 	console.log(primos(15));
-*/
+
+// Ejercicio 2 mas optimo 
 
 function primos(n) {
 	if (n===1){
@@ -459,5 +460,10 @@ function primos(n) {
 	}
 }
 console.log(primos(5));
+*/
 
+// Ejercicio tres 
 
+// Ejercicio cuatro 
+
+var corredor = { "Nombre","Apellido",edad,"genero" };

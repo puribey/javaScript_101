@@ -84,4 +84,6 @@ function randomHalloween (disfraces){
 	return disfraces[pos];
 }
 
+// 
+
 
