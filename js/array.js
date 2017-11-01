@@ -93,6 +93,36 @@ var pokePrim = pokemons[0];
 console.log(`${pokePrim} and ${pokeUlt}`);
 
 
+*/
+////////////////////// Metodos de arrays ///////////////////////
+
+var planetas = ["Mercurio",
+				"Venus",
+				"Tierra",
+				"Marte",
+				"Jupiter",
+				"Saturno",
+				"Urano",
+				"Neptuno",
+				"Pluton"];
+
+// console.log(planetas.push("Ofiuco")); // va a dar 10, valor numerico .push suma un elemento al final del array
+
+// console.log(planetas.push(["Luna","Sol"])); // va a dar 11 por que al ser un parametro se suma como una sola posicion
+
+// console.log(planetas[10][1]); // va a dar sol 
+
+// El metodo forEach recibe como parametro una funcion que puede recibir o no parametros. Esa funcion se va a ejecutar por cada elemento del array
+// Tres parametros predeterminados en forEach: contenido , numero de indice , array 
+
+planetas.forEach(function(planeta, indice){
+	console.log(`El planeta es ${planeta} y su indice es ${indice}`);
+});
+
+planetas.forEach((planeta, indice) => {
+	console.log(`El planeta es ${planeta} y su indice es ${indice}`);
+});
+
 
 
 
