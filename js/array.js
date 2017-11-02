@@ -93,7 +93,7 @@ var pokePrim = pokemons[0];
 console.log(`${pokePrim} and ${pokeUlt}`);
 
 
-*/
+
 ////////////////////// Metodos de arrays ///////////////////////
 
 var planetas = ["Mercurio",
@@ -123,6 +123,45 @@ planetas.forEach((planeta, indice) => {
 	console.log(`El planeta es ${planeta} y su indice es ${indice}`);
 });
 
+
+// El metodo map crea un nuevo array y recibe como parametro una funcion, necesita una variable donde guardarse 
+
+
+var numeros = [1,2,3,4,5,6,7];
+
+var numerosMultiplicados = numeros.map(function(numero){
+	return numero + 2;
+});
+console.log(`Array original: ${numeros}`);
+console.log(`Array multiplicado: ${numerosMultiplicados}`);
+
+
+
+var numeros = [];
+
+for (var i = 0; i <=1000 ; i ++){
+	numeros[i]=i;
+}
+
+console.log(numeros);
+
+var numeroMasDiez = numeros.map(function(numero){
+	return numero + 10;
+});
+
+console.log(numeroMasDiez);
+
+
+
+var palabras = ["dont", "leave", "me", "hanging"];
+
+var upper = palabras.map(function(palabra){
+	return palabra.toUpperCase();
+});
+
+console.log(upper);
+
+*/
 
 
 

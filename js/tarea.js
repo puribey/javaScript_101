@@ -222,6 +222,10 @@ var aumento= (sueldo*3)/100;
 var total= sueldo+aumento;
 alert("Por haber trabajado más de 3 años en esta empresa, su sueldo será de: $"+total+".-");
 }
+
+
+
+
 //////////////////////// LEVEL UP : 2 ///////////////////////////////
 // EJERCICIO 1
 var canje = 1000;
@@ -243,6 +247,10 @@ alert("Usted podra completar su canje con dinero siendo el total: $"+pesos+".-")
 else {
 alert("Sus puntos no le alcanzan. Lo sentimos.")
 }
+
+
+
+
 ///////////////////////// LEVEL UP : ARRAYS ////////////////////////////
 // Ejericio 1
 var arr = [];
@@ -381,6 +389,7 @@ console.log(aumento);
 montoFinal = datos1[3]+aumento;
 montoFinal = montoFinal.toFixed(2);
 console.log(`El monto a cobrar por fido este mes sera de $ ${montoFinal} .-` );
+
 // OPCION OPTIMA
 var datos1 = ["Fido","Gomez",26,15000.78,true];
 var datos2 = ["Gervasio","Fernandez",32,28.550,false];
@@ -413,7 +422,7 @@ console.log(`El monto a cobrar por fido este mes sera de $ ${montoFinal} .-` );
 }
 }
 }
-=
+
 
 
 ///////////////////////// LEVEL UP : FUNCIONES ////////////////////////////
@@ -460,10 +469,39 @@ function primos(n) {
 	}
 }
 console.log(primos(5));
-*/
+
 
 // Ejercicio tres 
 
 // Ejercicio cuatro 
 
 var corredor = { "Nombre","Apellido",edad,"genero" };
+
+*/
+
+// Dado el siguiente array [10,4,5,90,11,11,34,8,2,2,7,0], devolver un nuevo array que no contenga 
+// los numeros repetidos. 
+
+var numeros = [10,4,5,90,11,11,34,8,2,2,7,0];
+var len = numeros.length;
+
+console.log(`Este es el array original: ${numeros}`);
+
+var numerosNuevos = numeros.map(function(n,i){
+	if(numeros[i]==numeros[i+1]){
+		numeros.splice(0,0);
+	} else {
+		return n;
+	}
+});
+
+console.log(`Este es el array hecho con map: ${numerosNuevos}`);
+
+var arrayNuevo = numeros.filter( function( item, index, inputArray ) {
+           return inputArray.indexOf(item) == index;
+    });
+
+console.log(`Este es el array hecho con filter: ${arrayNuevo}`);
+
+
+
