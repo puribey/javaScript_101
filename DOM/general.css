@@ -1,0 +1,15 @@
+.caja{
+	width: 200px;
+	background: black;
+	color: white; 
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-family: sans-serif;
+	margin-bottom: 10px;
+}
+
+.violeta {
+	background-color: #707;
+	
+}
