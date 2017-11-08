@@ -1,0 +1,24 @@
+body {
+	width: 50%;
+	margin: 0 auto;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 20px;
+	border: 0px;
+	background-color: #F0F;
+	color: white;
+}
+
+ul {
+	text-align: center;
+	padding-top: 20px;
+	margin-left: -40px;
+}
+
+.listaloca {
+	list-style-type: none;
+}
