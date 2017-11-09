@@ -29,7 +29,20 @@ segundaCaja.style.background = 'blue'; // uso de etiqueta Style para dar estilo
 
 
 // Funcion de un boton 
+var escalera=[1,2,3,4,5];
+var tirada=[1,2,3,4,5];
+
+console.log(escalera);
+
+if (escalera[0]==1 && escalera[1]==2 && escalera[2]==3 && escalera[3]==4 && escalera[4]==5){
+			
+			console.log(`tu total de puntos es de`);
+		} else {
+			console.log('hola');
+		}
 
 function myFunction(){
 	document.getElementsByTagName('input')[0].setAttribute('type','button');
 }
+
+
