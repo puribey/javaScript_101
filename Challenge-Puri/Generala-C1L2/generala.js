@@ -5,9 +5,10 @@ var tirada = [];
 var limite = 10;
 var puntos=0;
 var iguales =[0]; 
+var lis = document.getElementsByTagName('li');
 
 
-function tirarDados(){
+function tirarDados() {
 	if(!lis.length){
 		if (tiros >= limite) {
 			alert(`Tiraste los dados más de ${limite} veces! Perdiste! Tu total de puntos al finalizar es de: ${puntos}`);
@@ -108,7 +109,6 @@ function contadorPuntos() {
 }
 
 
-var lis = document.getElementsByTagName('li');
 
 function limpiar(){
 	if(lis.length){
