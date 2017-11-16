@@ -2,22 +2,17 @@ var dado = [1,2,3,4,5,6];
 var lista = document.getElementById('lista'); 
 var tiros = 0;
 var tirada = [];
-var limite = 20;
+var limite = 10;
 var puntos=0;
 var iguales =[0]; 
-var generala = false;
+var lis = document.getElementsByTagName('li');
 
 
-function tirarDados(){
+function tirarDados() {
 	if(!lis.length){
-		if (tiros >= limite || generala===true) {
-			if (generala === true){
-				alert(`Ganaste! Sacaste Generala!`);
+		if (tiros >= limite) {
+			alert(`Tiraste los dados más de ${limite} veces! Perdiste! Tu total de puntos al finalizar es de: ${puntos}`);
 			location.reload();
-			} else {
-				alert(`Tiraste los dados más de ${limite} veces! Perdiste! Tu total de puntos al finalizar es de: ${puntos}`);
-				location.reload();
-			}
 		} else {
 			for( var i= 0 ; i<5; i++){	
 				j = dado[Math.floor(Math.random()*dado.length)];
@@ -73,14 +68,13 @@ function contadorPuntos() {
 	var resultados = document.getElementById('resultados');
 	console.log(`este es el ultimo iguales ${iguales}`);
 	
-	if (iguales[k] == 5){ // hacer funcion generala 
+	if (iguales[k] == 5){
 			h2.textContent = "Sacaste Generala! Ganaste!";
 			resultados.appendChild(h2);
 			puntos = puntos + 50;
 			h3.textContent = "Tienes un total de" + puntos + " puntos!";
 			resultados.appendChild(h3);
 			console.log(`tu total de puntos es de ${puntos}`);
-			generala = true;
 	} else {
 
 		for(var k=0 ; k<iguales.length;k++){
@@ -115,7 +109,6 @@ function contadorPuntos() {
 }
 
 
-var lis = document.getElementsByTagName('li');
 
 function limpiar(){
 	if(lis.length){
