@@ -1,1 +1,64 @@
 /* Estilos ahorcado */
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	color: #408;
+	font-family: sans-serif;
+	margin-top: 50px;
+}
+
+.btnJugar {
+	width: 100px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: 140%;
+	border: 2px solid #408;
+	color: #408;
+	background-color: white;
+	border-radius: 2px;
+	margin: 50px 0px;
+}
+
+.btnJugar:hover {
+	color: white;
+	background-color: #408;
+}
+
+.btnDisplay {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.btnLetra{
+	width: 50px;
+	height: 50px;
+	border: 0px;
+	font-size: 18px;
+	background-color: #408;
+	color: white;
+	margin:2px;
+}
+
+.btnLetra:hover {
+	border: 2px solid #408;
+	color: #408;
+	background-color: white;
+}
+
+.dPal {
+	margin: 50px 0px;
+	color: #408;
+	font-family: sans-serif;
+	font-size: 30px;
+}
+
+.txt {
+	color: #408;
+	font-family: sans-serif;
+	font-size: 18px;
+}
