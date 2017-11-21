@@ -1,6 +1,3 @@
-
-// var ids = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-
 var treinta = ["CACAO","ENANO","CABLE","JABON","MADRE",
 				"FABULA","HABLAR","IBERIA","LABIAL","OBJETO",
 				"ZAPALLO","SABANAS","QUEJOSA","PIADOSA","MUNDANO",
@@ -8,6 +5,8 @@ var treinta = ["CACAO","ENANO","CABLE","JABON","MADRE",
 				"FOTOGRAFIA","COMPUTADORA","DEPARTAMENTO","BRABUCONES","ESPACIALISTA",
 				"ESCANDALOSO","INSOPORTABLE","GUITARRISTA","DUMBLEDORE","CHOCOLATE"];
 
+var guess;
+console.log(guess);
 var bajo=[];
 var medio=[];
 var alto=[];
@@ -15,49 +14,12 @@ var p;
 var puntosGame = 0;
 var restaPuntos = 5;
 var nivel1 = [];
-var palMagica = document.getElementById('palMagica');
-var divpalabra = document.getElementById('divpalabra');
-var letra;
-var x = [];
+var nivel2 = [];
+var nivel3 = [];
+var letrasBien = [];
+var letrasMal = [];
+var palabras = 0;
 //console.log(treinta[0].length);
-
-
-/*********** BOTONES CON LETRAS ************/
-var html = '';
-var c;
-for (var i = 65; 90 >= i; i++) {// A-65, Z-90
-  c = String.fromCharCode(i);
-  // console.log(c); //para ver las letras 
-  html += '<button onclick="setLetter(\'' + c + '\');" id="'+ c +'" class="btnLetra">' + c + '</button>';
-}
-document.getElementById('box').innerHTML = html;
-
-var setLetter = function(alfabeto) {
-
-  //divpalabra.innerHTML += alfabeto;
-  puntosGame = puntosGame - restaPuntos;
-  document.getElementById('divPuntos').innerHTML = '<p class="txt">El total de puntos del nivel es de ' + puntosGame + ' puntos </p>';
-  //console.log(alfabeto);
-
-  for (var j=0; j<nivel1.length;j++){
-  	var cont = nivel1[j].length; //cantidad de letras que tiene cada palabra
-  	//console.log(cont); 
-  	if (nivel1[j] == nivel1[0]){
-  		for (var k=0 ; k<cont; k++){
-  			//console.log(nivel1[j][k]); // cada letra de cada palabra 
-  			if (nivel1[j][k]== alfabeto) {
-  				//console.log(nivel1[j][k]);
-  				x[k] = alfabeto;
-  				divpalabra.innerHTML += alfabeto + '(' +k + ')';	
-  				console.log(x[k]);
-  				
-  			} 
-  		}
-  	}
-};
-
-
-
 
 /************* SELECCION DE PALABRAS ************/
 
@@ -74,13 +36,20 @@ for (var i =0; i<treinta.length;i++){
 
 // console.log(bajo); console.log(medio); console.log(alto);
 
-
 for (var i=0; i<=3;i++){
-	var elegido = Math.floor(Math.random()*bajo.length);
+	var elegido1 = Math.floor(Math.random()*bajo.length);
 	//console.log(bajo[elegido]);
-	nivel1.push(bajo[elegido]);
-	bajo.splice(elegido,1);
-	//console.log(` este es el array del nivel 1: ${nivel1}`);
+	var elegido2 = Math.floor(Math.random()*medio.length);
+	var elegido3 = Math.floor(Math.random()*alto.length);
+	nivel1.push(bajo[elegido1]);
+	bajo.splice(elegido1,1);
+
+	nivel2.push(medio[elegido2]);
+	medio.splice(elegido2,1);
+
+	nivel3.push(alto[elegido3]);
+	alto.splice(elegido3,1);
+	
 	
 	if(nivel1[i].length == 5){
 		puntosGame = puntosGame + 25;
@@ -90,37 +59,35 @@ for (var i=0; i<=3;i++){
 
 }	
 
-	document.getElementById('divPuntos').innerHTML = '<p class="txt">El total de puntos del nivel es de ' + puntosGame + ' puntos </p>';
-	//console.log(puntosGame);
-	// return nivel1;
+console.log(`Este es el array del nivel 1: ${nivel1}`);
+console.log(`Este es el array del nivel 2: ${nivel2}`);
+console.log(`Este es el array del nivel 3: ${nivel3}`);
 
-	for (var j=0; j<nivel1.length;j++){
-		var cont = nivel1[j].length; //cantidad de letras que tiene cada palabra
-		console.log(cont); 
-		if (nivel1[j] == nivel1[0]){
-			for (var k=0 ; k<cont; k++){
-				console.log(nivel1[j][k]); // cada letra de cada palabra 
-				x.push("X");
-				palMagica.textContent = x;	
-			}
+console.log(nivel1[0].length);
+
+
+
+if (palabras == 0 ){
+	alert("El Nivel 1 tiene 4 palabras. Comenzamos?");
+	for(var i = 0; i < nivel1.length; i++){
+		console.log(nivel1.length);
+		alert(`La palabra numero ${i+1} tiene ${nivel1[i].length} letras`);
+		for(var j=0; j<nivel1[i].length && letrasBien.length != nivel1[i].length; j++){
+				console.log(nivel1[i].length);
+				console.log(nivel1[i]);
+				guess = prompt("Ingrese una letra o arriesgue una palabra").toUpperCase();
+				
+				if (guess == nivel1[i][j]){
+					letrasBien.push(guess);
+					alert(`Encontramos la letra ${guess} en la posicion ${j}`);
+				} else {
+					letrasMal.push(guess);
+					alert(`Lo sentimos la letra ${guess} no se encuentra en la palabra. Sus letras arriesgadas son ${letrasMal}` );
+				}
+			
 		}
+		
 	}
-	
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-<button id="3" onClick="reply_click(this.id)">B3</button>
-function reply_click(clicked_id){
-    alert(clicked_id);
 }
-*/
+
+
