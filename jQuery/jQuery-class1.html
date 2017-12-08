@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Class 1</title>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<table id="tabla-imp">
+			<thead>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Edad</th>
+				<th></th>
+			</thead>
+			<tr id="filaUno">
+				<td><input type="text" id="name1" class="disable fila1" value="Belen" disabled></td>
+				<td><input type="text" id="apellido1" class="disable fila1" value="Alegre" disabled></td>
+				<td><input type="text" id="edad1" class="disable fila1" value="30" disabled></td>
+				<td><button class="btnEdit" id="btn1" data-rg=".fila1">&#9999;</button>
+				<button class="btnErase" id="1" data-rg="#filaUno">x</button></td>
+			</tr>
+			<tr id="filaDos">
+				<td><input type="text" id="name2" class="disable fila2" value="Luciana" disabled></td>
+				<td><input type="text" id="apellido2" class="disable fila2" value="Mendez" disabled></td>
+				<td><input type="text" id="edad2" class="disable fila2" value="27" disabled></td>
+				<td><button class="btnEdit" id="btn2" data-rg=".fila2" >&#9999;</button>
+				<button class="btnErase" data-rg="#filaDos">x</button></td>
+			</tr>
+			<tr id="filaTres">
+				<td><input type="text" id="name3" class="disable fila3" value="Gia" disabled></td>
+				<td><input type="text" id="apellido3" class="disable fila3" value="Castello" disabled></td>
+				<td><input type="text" id="edad3" class="disable fila3" value="25" disabled></td>
+				<td><button class="btnEdit" id="btn3" data-rg=".fila3">&#9999;</button>
+				<button class="btnErase" data-rg="#filaTres">x</button></td>
+			</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript" src="jQuery-class1.js"></script>
+</body>
+</html>
