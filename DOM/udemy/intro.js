@@ -181,9 +181,31 @@ console.log(`Addition: a and b are ${a*b}`);
 console.log(`Lets do funtion here. ${multiply}`);
 
 //ARROW FUNCTIONS
-// they are always funtion 
+// they are always funtion extressions
 // they are anonymus 
 // no cambia el this , se vuelve estatico 
+
+// Before: 
+function add(x,y){
+	return x+y;
+}
+// Now:
+var add = (x,y) => x+y;
+// Also 
+
+var add = (x,y) => {
+	return x+y;
+}
+
+
+/*********** Dependency Management (Section8)  ***********/
+
+// node, npm, homebrew,  installed 
+// brew install yarn 
+// sudo npm install -g grunt-cli
+// sudo npm install -g gulp-cli
+// sudo npm install -g webpack
+
 
 
 

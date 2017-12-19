@@ -33,7 +33,6 @@ function getUser(name) {
 
 function assignValues() {
   document.getElementById('loader').style = 'display: none';
-
   document.getElementById('avatar').src = response.avatar_url;
   document.getElementById('name').innerText = response.name;
   document.getElementById('username').innerText = response.login;
