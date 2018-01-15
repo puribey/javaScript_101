@@ -1,0 +1,15 @@
+{
+  "name": "es6-101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel clases.js --out-file compiled.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "puri",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
